@@ -10,12 +10,24 @@ public class EmpDto {
 
     private String deptNo;
 
-    public EmpDto(Integer empNumber, String eName, String job, String deptNo) {
+    private Integer salary;
+
+    public Integer getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Integer salary) {
+        this.salary = salary;
+    }
+
+    public EmpDto(Integer empNumber, String eName, String job, String deptNo, Integer salary) {
         this.empNumber = empNumber;
         this.eName = eName;
         this.job = job;
         this.deptNo = deptNo;
+        this.salary = salary;
     }
+
 
     public EmpDto() {
     }

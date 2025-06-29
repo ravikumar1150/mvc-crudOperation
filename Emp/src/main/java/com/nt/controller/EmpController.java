@@ -6,10 +6,10 @@ import com.nt.sevice.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -29,6 +29,36 @@ public class EmpController {
       //  List<Employee> collect = emp.stream().collect(Collectors.toList());
 
         return new ResponseEntity<>(emp, HttpStatus.OK);
+    }
+
+    @GetMapping("/byname")
+    public ResponseEntity<?> findEmpName(@RequestParam  String ename){
+
+
+        List<EmpDto> employeeByName = empService.getEmployeeByName(ename);
+
+         return  new ResponseEntity<>(employeeByName, HttpStatus.OK);
+
+    }
+
+    @GetMapping("/seconSal/{deptNo}")
+    public ResponseEntity<EmpDto> findScondHighSal(@PathVariable String deptNo){
+
+        Optional<EmpDto> secondHighSal = empService.findSecondHighSal(deptNo);
+
+        return ResponseEntity.ok().body(secondHighSal.get());
+
+    }
+
+    @PatchMapping("/salUpdateByName/{salary}/{eName}")
+    public ResponseEntity<?> updateEmpSalary(@PathVariable Double salary,
+                                             @PathVariable String eName){
+
+        String s = empService.updateEmpSal(salary, eName);
+
+        return new  ResponseEntity<>(s,HttpStatus.OK);
+
+
     }
 
 }
