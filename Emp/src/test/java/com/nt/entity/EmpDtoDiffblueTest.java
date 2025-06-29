@@ -65,7 +65,7 @@ class EmpDtoDiffblueTest {
     @Tag("MaintainedByDiffblue")
     void testGettersAndSetters_whenTen() {
         // Arrange and Act
-        EmpDto actualEmpDto = new EmpDto(10, "E Name", "Job", "Dept No");
+        EmpDto actualEmpDto = new EmpDto(10, "E Name", "Job", "Dept No",4000);
         actualEmpDto.setDeptNo("Dept No");
         actualEmpDto.setEmpNumber(10);
         actualEmpDto.setJob("Job");
