@@ -29,11 +29,11 @@ class EmpDtoDiffblueTest {
     void testGettersAndSetters() {
         // Arrange and Act
         EmpDto actualEmpDto = new EmpDto();
-        actualEmpDto.setDeptNo("Dept No");
+        actualEmpDto.setDeptNo(Integer.valueOf("Dept No"));
         actualEmpDto.setEmpNumber(10);
         actualEmpDto.setJob("Job");
         actualEmpDto.setEName("E Name");
-        String actualDeptNo = actualEmpDto.getDeptNo();
+        String actualDeptNo = String.valueOf(actualEmpDto.getDeptNo());
         Integer actualEmpNumber = actualEmpDto.getEmpNumber();
 
         // Assert
@@ -66,11 +66,11 @@ class EmpDtoDiffblueTest {
     void testGettersAndSetters_whenTen() {
         // Arrange and Act
         EmpDto actualEmpDto = new EmpDto(10, "E Name", "Job", "Dept No",4000,new Department());
-        actualEmpDto.setDeptNo("Dept No");
+        actualEmpDto.setDeptNo(Integer.valueOf("Dept No"));
         actualEmpDto.setEmpNumber(10);
         actualEmpDto.setJob("Job");
         actualEmpDto.setEName("E Name");
-        String actualDeptNo = actualEmpDto.getDeptNo();
+        String actualDeptNo = String.valueOf(actualEmpDto.getDeptNo());
         Integer actualEmpNumber = actualEmpDto.getEmpNumber();
 
         // Assert

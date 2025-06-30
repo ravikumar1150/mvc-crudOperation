@@ -18,10 +18,6 @@ public interface EmpService {
 
     public String updateEmpSal(Double salary,String eName);
 
-<<<<<<< Updated upstream
-    public Optional<String> findEmpLocByName(String eName);
-=======
     public Optional<String>findEmpLocByName(String eName,String job);
 
->>>>>>> Stashed changes
 }

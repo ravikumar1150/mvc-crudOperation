@@ -18,19 +18,13 @@ public interface EmpRepo extends JpaRepository<Employee, Integer> {
     @Query("""
     SELECT e.eName, e.department.location
     FROM Employee e
-<<<<<<< Updated upstream
-    WHERE e.eName = :ename""")
-    Optional<String> findLocationByEmpName(@Param("ename") String ename);
 
-    @Query("SELECT e.empNumber, e.eName,e.job ,e.salary FROM Employee e")
-=======
     WHERE e.eName =:eName and e.job=:job
-""")
+          """)
      public Optional<String> findEmployeeLoc(@Param("eName") String eName,@Param("job")String job);
 
 
     @Query(value = "SELECT * FROM emp", nativeQuery = true)
->>>>>>> Stashed changes
     public List<EmpDto> findAllEmployee();
 
 
