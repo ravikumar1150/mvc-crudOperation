@@ -32,7 +32,7 @@ class EmpDtoDiffblueTest {
         actualEmpDto.setDeptNo("Dept No");
         actualEmpDto.setEmpNumber(10);
         actualEmpDto.setJob("Job");
-        actualEmpDto.seteName("E Name");
+        actualEmpDto.setEName("E Name");
         String actualDeptNo = actualEmpDto.getDeptNo();
         Integer actualEmpNumber = actualEmpDto.getEmpNumber();
 
@@ -65,11 +65,11 @@ class EmpDtoDiffblueTest {
     @Tag("MaintainedByDiffblue")
     void testGettersAndSetters_whenTen() {
         // Arrange and Act
-        EmpDto actualEmpDto = new EmpDto(10, "E Name", "Job", "Dept No",4000);
+        EmpDto actualEmpDto = new EmpDto(10, "E Name", "Job", "Dept No",4000,new Department());
         actualEmpDto.setDeptNo("Dept No");
         actualEmpDto.setEmpNumber(10);
         actualEmpDto.setJob("Job");
-        actualEmpDto.seteName("E Name");
+        actualEmpDto.setEName("E Name");
         String actualDeptNo = actualEmpDto.getDeptNo();
         Integer actualEmpNumber = actualEmpDto.getEmpNumber();
 
@@ -80,15 +80,15 @@ class EmpDtoDiffblueTest {
     }
 
     /**
-     * Test {@link EmpDto#geteName()}.
+     * Test {@link EmpDto#getEName()}.
      * <p>
-     * Method under test: {@link EmpDto#geteName()}
+     * Method under test: {@link EmpDto#getEName()}
      */
     @Test
     @DisplayName("Test geteName()")
     @Tag("MaintainedByDiffblue")
     void testGeteName() {
         // Arrange, Act and Assert
-        assertNull(new EmpDto().geteName());
+        assertNull(new EmpDto().getEName());
     }
 }

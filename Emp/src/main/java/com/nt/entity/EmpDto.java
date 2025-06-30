@@ -1,6 +1,10 @@
 package com.nt.entity;
 
+<<<<<<< Updated upstream
 
+=======
+import jdk.jfr.DataAmount;
+>>>>>>> Stashed changes
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +24,11 @@ public class EmpDto {
 
     private Integer salary;
 
+<<<<<<< Updated upstream
+=======
+    private Department dept;
+
+>>>>>>> Stashed changes
 
 
 }

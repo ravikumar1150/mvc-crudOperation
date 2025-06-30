@@ -3,6 +3,7 @@ package com.nt.repo;
 import com.nt.entity.EmpDto;
 import com.nt.entity.Employee;
 import jakarta.transaction.Transactional;
+import org.hibernate.cache.spi.entry.StructuredCacheEntry;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -17,10 +18,19 @@ public interface EmpRepo extends JpaRepository<Employee, Integer> {
     @Query("""
     SELECT e.eName, e.department.location
     FROM Employee e
+<<<<<<< Updated upstream
     WHERE e.eName = :ename""")
     Optional<String> findLocationByEmpName(@Param("ename") String ename);
 
     @Query("SELECT e.empNumber, e.eName,e.job ,e.salary FROM Employee e")
+=======
+    WHERE e.eName =:eName and e.job=:job
+""")
+     public Optional<String> findEmployeeLoc(@Param("eName") String eName,@Param("job")String job);
+
+
+    @Query(value = "SELECT * FROM emp", nativeQuery = true)
+>>>>>>> Stashed changes
     public List<EmpDto> findAllEmployee();
 
 

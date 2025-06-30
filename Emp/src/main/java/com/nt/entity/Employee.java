@@ -8,6 +8,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "emp")
 @Data
@@ -22,10 +26,17 @@ public class Employee {
     @Column(name = "ename")
     private String eName;
 
+<<<<<<< Updated upstream
     @Column(name = "job")
     private String job;
 
     @Column(name = "sal")
+=======
+    @Column(name= "job")
+    private String job;
+
+    @Column(name="sal")
+>>>>>>> Stashed changes
     private Integer salary;
 
     @ManyToOne

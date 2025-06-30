@@ -42,7 +42,11 @@ public class EmpServiceImpl implements EmpService {
         List<EmpDto> allEmployee = empRepo.findAllEmployee();
 
         return allEmployee.stream()
+<<<<<<< Updated upstream
                 .filter(emp ->emp.getDeptNo().equals(deptNo))
+=======
+                .filter(emp -> emp.getDeptNo().equals(deptNo))
+>>>>>>> Stashed changes
                 .sorted((e1, e2) -> Double.compare(e2.getSalary(), e1.getSalary()))
                 .skip(1)
                 .findFirst();
@@ -65,9 +69,17 @@ public class EmpServiceImpl implements EmpService {
     }
 
     @Override
+<<<<<<< Updated upstream
     public Optional<String> findEmpLocByName(String eName) {
 
         return empRepo.findLocationByEmpName(eName);
+=======
+    public Optional<String> findEmpLocByName(String eName,String job) {
+
+        return empRepo.findEmployeeLoc(eName,job);
+
+
+>>>>>>> Stashed changes
 
     }
 

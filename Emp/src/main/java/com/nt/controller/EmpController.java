@@ -30,8 +30,12 @@ public class EmpController {
 
     @GetMapping("/findbyname")
     public ResponseEntity<List<EmpDto>> findEmpName(@RequestParam String ename) {
+<<<<<<< Updated upstream
         System.out.println("emp changes");
         System.out.println(ename);
+=======
+
+>>>>>>> Stashed changes
         List<EmpDto> employeeByName = empService.getEmployeeByName(ename);
         return new ResponseEntity<>(employeeByName, HttpStatus.OK);
 
@@ -59,11 +63,14 @@ public class EmpController {
     }
 
     @GetMapping("/locbyname")
-    public ResponseEntity<Optional<String>> finEmpLocByName(@RequestParam String eName) {
+    public ResponseEntity<Optional<String>> finEmpLocByName(@RequestParam String eName,@RequestParam String job) {
 
-        Optional<String> empLocByName = empService.findEmpLocByName(eName);
-        return ResponseEntity.ok().body(empLocByName);
+        Optional<String> empLocByName = empService.findEmpLocByName(eName,job);
+
+       return  empLocByName.map(emp -> new ResponseEntity(emp, HttpStatus.OK))
+                    .orElseGet(()-> new ResponseEntity(HttpStatus.NOT_FOUND));
 
     }
+
 
 }
