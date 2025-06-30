@@ -31,6 +31,7 @@ public class EmpController {
     @GetMapping("/findbyname")
     public ResponseEntity<List<EmpDto>> findEmpName(@RequestParam String ename) {
         System.out.println("emp changes");
+        System.out.println(ename);
         List<EmpDto> employeeByName = empService.getEmployeeByName(ename);
         return new ResponseEntity<>(employeeByName, HttpStatus.OK);
 

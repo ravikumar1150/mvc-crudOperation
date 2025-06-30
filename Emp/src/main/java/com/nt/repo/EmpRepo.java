@@ -9,13 +9,20 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface EmpRepo extends JpaRepository<Employee, Integer> {
 
 
-    @Query("SELECT new com.nt.entity.EmpDto(e.empNumber, e.eName,e.job,e.deptNo,e.salary) FROM Employee e")
+    @Query("""
+    SELECT e.eName, e.department.location
+    FROM Employee e
+    WHERE e.eName = :ename""")
+    Optional<String> findLocationByEmpName(@Param("ename") String ename);
+
+    @Query("SELECT e.empNumber, e.eName,e.job ,e.salary FROM Employee e")
     public List<EmpDto> findAllEmployee();
-;
+
 
     @Transactional
     @Modifying

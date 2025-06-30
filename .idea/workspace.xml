@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46ef1f36-729f-4ebc-a592-b3d2600d0839" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Emp/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emp/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Emp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emp/src/main/java/com/nt/controller/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Emp/src/main/java/com/nt/controller/EmpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emp/src/main/java/com/nt/entity/EmpDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Emp/src/main/java/com/nt/entity/EmpDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emp/src/main/java/com/nt/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/Emp/src/main/java/com/nt/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emp/src/main/java/com/nt/repo/EmpRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Emp/src/main/java/com/nt/repo/EmpRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emp/src/main/java/com/nt/sevice/EmpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Emp/src/main/java/com/nt/sevice/EmpService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Emp/src/main/java/com/nt/sevice/EmpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Emp/src/main/java/com/nt/sevice/EmpServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Ravikumar\Downloads\Emp\htmlReport" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Exception" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="jet-emp" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2z7fHy61FxNosMCIdPXWYNOVCHG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Diffblue Cover.Write tests for method EmpController.findEmpName.executor": "Run",
+    "Diffblue Cover.Write tests for method EmpServiceImpl.getEmployeeByName.executor": "Run",
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "HTTP Request.generated-requests | #2.executor": "Run",
+    "JUnit.All in Emp (1).executor": "Run",
+    "JUnit.All in Emp.executor": "Run",
+    "JUnit.EmpControllerDiffblueTest.executor": "Run",
+    "JUnit.EmpControllerDiffblueTest.testFindAllEmp.executor": "Coverage",
+    "JUnit.EmpDtoDiffblueTest.executor": "Coverage",
+    "Maven.Emp [clean].executor": "Run",
+    "Maven.Emp [compile].executor": "Run",
+    "Maven.Emp [install].executor": "Run",
+    "Maven.Emp [jacoco:check].executor": "Run",
+    "Maven.Emp [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
+    "Maven.Emp [org.apache.maven.plugins:maven-install-plugin:3.1.4:install].executor": "Run",
+    "Maven.Emp [package].executor": "Run",
+    "Maven.Emp [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.EmpApplication.executor": "Run",
+    "Spring Boot.NtApplication.executor": "Run",
+    "git-widget-placeholder": "jet-emp",
+    "last_opened_file_path": "C:/Users/Ravikumar/Downloads/Emp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+      <command value="mvn jacoco:check" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.EmpControllerDiffblueTest">
+    <configuration name="EmpControllerDiffblueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Emp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nt.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nt.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.nt.controller.EmpControllerDiffblueTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpDtoDiffblueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Emp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nt.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nt.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.nt.entity.EmpDtoDiffblueTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="Emp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nt.EmpApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="Emp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nt.Emp.EmpApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="Emp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nt.NtApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Write tests for method EmpController.findAllEmp" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration">
+      <module name="Emp" />
+      <settings run-config-name="Write tests for method EmpController.findAllEmp" include-system-env-vars="true" skeleton-tests-only="false">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="com.nt.controller.EmpController.findAllEmp:()Lorg/springframework/http/ResponseEntity;" />
+      </settings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Write tests for method EmpController.findEmpName" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="Emp" />
+      <settings run-config-name="Write tests for method EmpController.findEmpName" include-system-env-vars="true" skeleton-tests-only="false">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="com.nt.controller.EmpController.findEmpName:(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" />
+      </settings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Write tests for method EmpServiceImpl.getEmployeeByName" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="Emp" />
+      <settings run-config-name="Write tests for method EmpServiceImpl.getEmployeeByName" include-system-env-vars="true" skeleton-tests-only="false">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="com.nt.sevice.EmpServiceImpl.getEmployeeByName:(Ljava/lang/String;)Ljava/util/List;" />
+      </settings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.NtApplication" />
+        <item itemvalue="JUnit.EmpControllerDiffblueTest" />
+        <item itemvalue="JUnit.EmpDtoDiffblueTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26927.53" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.26927.53" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46ef1f36-729f-4ebc-a592-b3d2600d0839" name="Changes" comment="" />
+      <created>1751086947593</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751086947593</updated>
+      <workItem from="1751086948777" duration="4382000" />
+      <workItem from="1751109102557" duration="6384000" />
+      <workItem from="1751118638334" duration="787000" />
+      <workItem from="1751119459855" duration="1067000" />
+      <workItem from="1751120547818" duration="9561000" />
+      <workItem from="1751167060988" duration="3030000" />
+      <workItem from="1751172993119" duration="11779000" />
+      <workItem from="1751207919258" duration="295000" />
+      <workItem from="1751208241840" duration="1893000" />
+      <workItem from="1751244019293" duration="11788000" />
+      <workItem from="1751256978826" duration="1138000" />
+      <workItem from="1751258191559" duration="624000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.configurationType" implementationName="com.diffblue.cover.write-tests-run-configuration" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Emp/src/main/java/com/nt/sevice/EmpServiceImpl.java</url>
+          <line>23</line>
+          <properties class="com.nt.sevice.EmpServiceImpl" method="findAllEmployee">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Emp/src/main/java/com/nt/controller/EmpController.java</url>
+          <line>23</line>
+          <properties class="com.nt.controller.EmpController" method="findAllEmp">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Emp/src/main/java/com/nt/controller/EmpController.java</url>
+          <line>40</line>
+          <properties class="com.nt.controller.EmpController" method="findScondHighSal">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Emp/src/main/java/com/nt/controller/EmpController.java</url>
+          <line>61</line>
+          <properties class="com.nt.controller.EmpController" method="finEmpLocByName">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Emp$EmpDtoDiffblueTest.ic" NAME="EmpDtoDiffblueTest Coverage Results" MODIFIED="1751128546520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.nt.entity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Emp$EmpControllerDiffblueTest_testFindAllEmp.ic" NAME="EmpControllerDiffblueTest.testFindAllEmp Coverage Results" MODIFIED="1751121965391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.nt.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Emp$EmpControllerDiffblueTest.ic" NAME="EmpControllerDiffblueTest Coverage Results" MODIFIED="1751128629908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.nt.controller.*</FILTER>
+    </SUITE>
+  </component>
+</project>

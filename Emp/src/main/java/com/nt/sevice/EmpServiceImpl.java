@@ -1,9 +1,10 @@
 package com.nt.sevice;
 
 import com.nt.entity.EmpDto;
-import com.nt.entity.Employee;
 import com.nt.exception.SalaryNotUpdateException;
 import com.nt.repo.EmpRepo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -13,6 +14,8 @@ import java.util.Optional;
 
 @Service
 public class EmpServiceImpl implements EmpService {
+
+    Logger log = LoggerFactory.getLogger(EmpServiceImpl.class);
 
     @Autowired
     private EmpRepo empRepo;
@@ -24,26 +27,25 @@ public class EmpServiceImpl implements EmpService {
     }
 
     @Override
-    public  List<EmpDto> getEmployeeByName(String empName) {
+    public List<EmpDto> getEmployeeByName(String empName) {
 
+        log.info("getEmployeeByName");
         List<EmpDto> allEmployee = empRepo.findAllEmployee();
 
-        return allEmployee.stream().filter(f -> f.geteName().equals(empName)).toList();
-
+        return allEmployee.stream().filter(f -> f.getEName().equals(empName)).toList();
 
 
     }
+
     @Override
     public Optional<EmpDto> findSecondHighSal(String deptNo) {
         List<EmpDto> allEmployee = empRepo.findAllEmployee();
 
-        Optional<EmpDto> empSecondSal = allEmployee.stream()
-                .filter(emp -> emp.getDeptNo().equals(deptNo))        // filter by dept
-                .sorted((e1, e2) ->Double.compare(e2.getSalary() , e1.getSalary())) // sort by salary desc
-                .skip(1)                                              // skip 1st (highest)
-                .findFirst();                                         // get 2nd highest
-
-        return empSecondSal;
+        return allEmployee.stream()
+                .filter(emp ->emp.getDeptNo().equals(deptNo))
+                .sorted((e1, e2) -> Double.compare(e2.getSalary(), e1.getSalary()))
+                .skip(1)
+                .findFirst();
     }
 
     @Override
@@ -51,20 +53,27 @@ public class EmpServiceImpl implements EmpService {
 
         int s = empRepo.empSalUpdateByName(salary, eName);
 
-        if(s>0){
+        if (s > 0) {
 
             return "success";
-        }else{
+        } else {
 
-            throw  new SalaryNotUpdateException(eName +empSalNotUpdateException().getMessage());
+            throw new SalaryNotUpdateException(eName + empSalNotUpdateException().getMessage());
         }
 
 
     }
 
+    @Override
+    public Optional<String> findEmpLocByName(String eName) {
+
+        return empRepo.findLocationByEmpName(eName);
+
+    }
+
 
     @ExceptionHandler(SalaryNotUpdateException.class)
-    public  SalaryNotUpdateException empSalNotUpdateException(){
+    public SalaryNotUpdateException empSalNotUpdateException() {
 
         return new SalaryNotUpdateException(" Salary Not Update");
 

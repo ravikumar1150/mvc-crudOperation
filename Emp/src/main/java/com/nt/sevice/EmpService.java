@@ -11,9 +11,12 @@ public interface EmpService {
 
     public List<EmpDto> findAllEmployee();
 
+
     public  List<EmpDto> getEmployeeByName(String empName);
 
     public Optional<EmpDto> findSecondHighSal(String deptNo);
 
     public String updateEmpSal(Double salary,String eName);
+
+    public Optional<String> findEmpLocByName(String eName);
 }
