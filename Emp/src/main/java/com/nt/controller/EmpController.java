@@ -61,6 +61,7 @@ public class EmpController {
 
         Optional<String> empLocByName = empService.findEmpLocByName(eName,job);
 
+        System.out.println("  ");
         System.out.println(" up stream");
         System.out.println(empLocByName);
         return  empLocByName.map(emp -> new ResponseEntity(emp, HttpStatus.OK))
