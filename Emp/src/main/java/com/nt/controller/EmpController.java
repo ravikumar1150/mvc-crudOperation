@@ -29,22 +29,23 @@ public class EmpController {
     }
 
     @GetMapping("/findbyname")
-    public ResponseEntity<List<EmpDto>> findEmpName(@RequestParam String ename) {
-        List<EmpDto> employeeByName = empService.getEmployeeByName(ename);
-        return new ResponseEntity<>(employeeByName, HttpStatus.OK);
+    public ResponseEntity<List<EmpDto>> findEmpName(@RequestParam String eName) {
 
+        List<EmpDto> employeeByName = empService.getEmployeeByName(eName);
+
+        return new ResponseEntity<>(employeeByName, HttpStatus.OK);
     }
 
     @GetMapping("/secondSal/{deptNo}")
-    public ResponseEntity<EmpDto> findScondHighSal(@PathVariable String deptNo) {
+    public ResponseEntity<EmpDto> findScondHighSal(@PathVariable Integer deptNo) {
 
         Optional<EmpDto> secondHighSal = empService.findSecondHighSal(deptNo);
 
-        return secondHighSal.map(empDto -> new ResponseEntity<>(empDto, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+        return secondHighSal.map(empDto -> new ResponseEntity<>(empDto, HttpStatus.OK))
+                                  .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
 
 
     }
-
     @PatchMapping("/salUpdateByName/{salary}/{eName}")
     public ResponseEntity<String> updateEmpSalary(@PathVariable Double salary,
                                                   @PathVariable String eName) {
@@ -61,11 +62,8 @@ public class EmpController {
 
         Optional<String> empLocByName = empService.findEmpLocByName(eName,job);
 
-        System.out.println("  ");
-        System.out.println(" up stream");
-        System.out.println(empLocByName);
-        return  empLocByName.map(emp -> new ResponseEntity(emp, HttpStatus.OK))
-                    .orElseGet(()-> new ResponseEntity(HttpStatus.NOT_FOUND));
+          return empLocByName.map(emp -> new ResponseEntity<>(Optional.of(emp), HttpStatus.OK))
+                               .orElseGet(() -> new ResponseEntity<>(Optional.empty(),HttpStatus.NOT_FOUND));
 
     }
 
