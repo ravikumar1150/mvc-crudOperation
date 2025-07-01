@@ -30,7 +30,7 @@ public class EmpController {
 
     @GetMapping("/findbyname")
     public ResponseEntity<List<EmpDto>> findEmpName(@RequestParam String eName) {
-
+        System.out.println("Call  Controller class for name:  "+eName);
         List<EmpDto> employeeByName = empService.getEmployeeByName(eName);
 
         return new ResponseEntity<>(employeeByName, HttpStatus.OK);

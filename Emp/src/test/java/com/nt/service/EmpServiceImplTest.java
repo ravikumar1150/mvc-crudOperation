@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class EmpServiceImplTest {
+class EmpServiceImplTest {
 
    private EmpRepo empRepo;
 
@@ -40,8 +40,8 @@ public class EmpServiceImplTest {
        assertEquals(2,allEmployee.size());
 
    }
-    @Test
-   public void findEmployeeByName(){
+   @Test
+   void findEmployeeByName(){
 
        EmpDto e1 = new EmpDto(123,"ravi","salesman", 1000);
 

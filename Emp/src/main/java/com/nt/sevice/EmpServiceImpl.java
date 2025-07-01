@@ -3,8 +3,10 @@ package com.nt.sevice;
 import com.nt.entity.EmpDto;
 import com.nt.exception.SalaryNotUpdateException;
 import com.nt.repo.EmpRepo;
+import org.hibernate.annotations.Cache;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -30,8 +32,9 @@ public class EmpServiceImpl implements EmpService {
     }
 
     @Override
+    @Cacheable(value = "employeeByNameCache",key = "#eName")
     public List<EmpDto> getEmployeeByName(String eName) {
-
+        System.out.println("⛏️ Fetching from DB for name: " + eName);
         log.info("getEmployeeByName");
         List<EmpDto> allEmployee = empRepo.findAllEmployee();
 
