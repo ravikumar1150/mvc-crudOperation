@@ -2,13 +2,12 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'ravi1150/emp-service'   // Your Docker Hub image name
-        IMAGE_TAG = 'latest'                  // Tag name
-        CONTAINER_NAME = 'emp-service'        // Docker container name
+        IMAGE_NAME = 'ravi1150/emp-service'
+        IMAGE_TAG = 'latest'
+        CONTAINER_NAME = 'emp-service'
     }
 
     stages {
-
         stage('Checkout Code') {
             steps {
                 git url: 'https://github.com/ravikumar1150/mvc-crudOperation', branch: 'jet-emp'
@@ -16,6 +15,12 @@ pipeline {
         }
 
         stage('Build with Maven') {
+            agent {
+                docker {
+                    image 'maven:3.9.6-eclipse-temurin-17'
+                    args '-v $HOME/.m2:/root/.m2'
+                }
+            }
             steps {
                 sh 'mvn clean package -DskipTests'
             }
@@ -23,19 +28,14 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
+                sh "docker build -t $IMAGE_NAME:$IMAGE_TAG ."
             }
         }
 
         stage('Run Docker Container') {
             steps {
-                script {
-                    // Remove existing container if running
-                    sh 'docker rm -f $CONTAINER_NAME || true'
-
-                    // Run new container
-                    sh 'docker run -d --name $CONTAINER_NAME -p 9090:9090 $IMAGE_NAME:$IMAGE_TAG'
-                }
+                sh "docker rm -f $CONTAINER_NAME || true"
+                sh "docker run -d --name $CONTAINER_NAME -p 9090:9090 $IMAGE_NAME:$IMAGE_TAG"
             }
         }
     }
